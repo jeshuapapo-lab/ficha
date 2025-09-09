@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Simple</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .link-hover:hover {
+            color: #4338ca;
+            transition: color 0.3s;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Encabezado -->
+    <header class="bg-white shadow-md p-4">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="#inicio" class="text-xl font-bold">Mi Portafolio</a>
+            <div class="flex space-x-4">
+                <a href="#acerca" class="link-hover">Acerca de Mí</a>
+                <a href="#proyectos" class="link-hover">Proyectos</a>
+                <a href="#habilidades" class="link-hover">Habilidades</a>
+                <a href="#contacto" class="link-hover">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="container mx-auto p-4 md:p-8">
+
+        <!-- Sección Inicio -->
+        <section id="inicio" class="text-center py-12">
+            <h1 class="text-4xl font-bold">¡Hola! Soy <span class="text-indigo-600">Jeshua Sánchez</span></h1>
+            <p id="texto-intro" class="mt-4 text-lg">Soy un estudiante y me gusta hacer sitios web.</p>
+            <button id="cambiar-texto" class="mt-6 bg-indigo-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-indigo-700 transition">
+                ¡Clic!
+            </button>
+        </section>
+
+        <!-- Sección Acerca -->
+        <section id="acerca" class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-2xl font-bold text-center">Sobre Mí</h2>
+            <p class="mt-4 text-center">
+                Estoy aprendiendo a programar. Me encanta la tecnología y crear cosas con código.
+            </p>
+        </section>
+
+        <!-- Sección Proyectos -->
+        <section id="proyectos" class="mb-8">
+            <h2 class="text-2xl font-bold text-center">Mis Proyectos</h2>
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Proyecto 1 -->
+                <article class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition">
+                    <img src="https://placehold.co/400x200/9CA3AF/1F2937?text=Mi+primer+juego" alt="Imagen del proyecto 1" class="rounded-md">
+                    <h3 class="mt-2 text-xl font-semibold">Juego de hacer un circulo perfecto</h3>
+                    <p class="mt-1 text-gray-600">Un juego simple hecho con JavaScript..</p>
+                </article>
+                <!-- Proyecto 2 -->
+                <article class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition">
+                    <img src="https://placehold.co/400x200/9CA3AF/1F2937?text=Mi+blog+de+ciencia" alt="Imagen del proyecto 2" class="rounded-md">
+                    <h3 class="mt-2 text-xl font-semibold">Mi juego de ver cuanto tiempo falta para festividades etc.</h3>
+                    <p class="mt-1 text-gray-600">Una página para ver el paso del tiempo. Simple HTML y CSS.</p>
+                </article>
+                <!-- Proyecto 3 -->
+                <article class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition">
+                    <img src="https://placehold.co/400x200/9CA3AF/1F2937?text=Calculadora+web" alt="Imagen del proyecto 3" class="rounded-md">
+                    <h3 class="mt-2 text-xl font-semibold">Calculadora</h3>
+                    <p class="mt-1 text-gray-600">Una calculadora para sumar, restar, etc. Usé JavaScript para la lógica.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección Habilidades -->
+        <section id="habilidades" class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-2xl font-bold text-center">Mis Habilidades</h2>
+            <div class="mt-4 flex flex-wrap justify-center gap-4">
+                <span class="bg-indigo-200 text-indigo-800 text-sm font-semibold px-3 py-1 rounded-full">HTML</span>
+                <span class="bg-indigo-200 text-indigo-800 text-sm font-semibold px-3 py-1 rounded-full">CSS</span>
+                <span class="bg-indigo-200 text-indigo-800 text-sm font-semibold px-3 py-1 rounded-full">JavaScript</span>
+                <span class="bg-indigo-200 text-indigo-800 text-sm font-semibold px-3 py-1 rounded-full">Python</span>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="bg-white p-6 rounded-lg shadow-md max-w-lg mx-auto">
+            <h2 class="text-2xl font-bold text-center">Contáctame</h2>
+            <form id="contact-form" class="mt-4 space-y-4">
+                <div>
+                    <label for="nombre" class="block text-sm font-medium">Tu Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" class="w-full p-2 border rounded-md">
+                    <span id="error-nombre" class="text-red-500 text-sm hidden">¡Oye, necesito tu nombre!</span>
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium">Tu Email:</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 border rounded-md">
+                    <span id="error-email" class="text-red-500 text-sm hidden">¡También tu email!</span>
+                </div>
+                <div>
+                    <label for="mensaje" class="block text-sm font-medium">Tu Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" class="w-full p-2 border rounded-md"></textarea>
+                    <span id="error-mensaje" class="text-red-500 text-sm hidden">¡Y tu mensaje!</span>
+                </div>
+                <button type="submit" class="w-full bg-indigo-600 text-white p-2 rounded-md hover:bg-indigo-700 transition">
+                    Enviar Mensaje
+                </button>
+            </form>
+            <div id="mensaje-envio" class="mt-4 text-center hidden"></div>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="bg-gray-800 text-gray-400 text-center py-4">
+        <p>Jeshua Sánchez © 2025</p>
+    </footer>
+
+    <!-- Script -->
+    <script>
+        const botonCambiar = document.getElementById('cambiar-texto');
+        const textoIntro = document.getElementById('texto-intro');
+
+        botonCambiar.addEventListener('click', () => {
+            if (textoIntro.textContent === "Soy un estudiante y me gusta hacer sitios web.") {
+                textoIntro.textContent = "¡Estoy aprendiendo a crear cosas geniales con código!";
+            } else {
+                textoIntro.textContent = "Soy un estudiante y me gusta hacer sitios web.";
+            }
+        });
+
+        const formulario = document.getElementById('contact-form');
+        const mensajeEnvio = document.getElementById('mensaje-envio');
+
+        formulario.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const nombre = document.getElementById('nombre').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const mensaje = document.getElementById('mensaje').value.trim();
+
+            let todoCorrecto = true;
+
+            document.getElementById('error-nombre').classList.add('hidden');
+            document.getElementById('error-email').classList.add('hidden');
+            document.getElementById('error-mensaje').classList.add('hidden');
+
+            if (nombre === '') {
+                document.getElementById('error-nombre').classList.remove('hidden');
+                todoCorrecto = false;
+            }
+            if (email === '') {
+                document.getElementById('error-email').classList.remove('hidden');
+                todoCorrecto = false;
+            }
+            if (mensaje === '') {
+                document.getElementById('error-mensaje').classList.remove('hidden');
+                todoCorrecto = false;
+            }
+
+            if (todoCorrecto) {
+                mensajeEnvio.textContent = "¡Gracias! Tu mensaje fue enviado.";
+                mensajeEnvio.classList.remove('hidden');
+                mensajeEnvio.classList.remove('text-red-500');
+                mensajeEnvio.classList.add('text-green-600');
+                formulario.reset();
+            } else {
+                mensajeEnvio.textContent = "Faltan algunos datos. ¡Por favor, llena todo!";
+                mensajeEnvio.classList.remove('hidden');
+                mensajeEnvio.classList.remove('text-green-600');
+                mensajeEnvio.classList.add('text-red-500');
+            }
+        });
+    </script>
+</body>
+</html>
